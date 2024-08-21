@@ -1,0 +1,40 @@
+dart create pedra_papel_tesoura -template
+
+lib{
+    //importar pacote para entrada e saida
+
+    //importar pacote para geração de valores aleatórios
+
+    //criar um enum que representa as opções, lembrando que o usuário pode querer sair
+
+    
+    void jogo(){
+        //loop que continua enquanto o usuário deseja continuar
+            //exibe o menu
+            //captura a opção do usuário,validando
+
+            //se o usuario digitar 4, sair, senão
+
+            //sortear a opção do computador
+
+            //mapear opção do usuario para enum
+
+            // ~~ computador
+
+            //exibir opcoes
+
+            //jogador vs computador
+
+            //verificar se houve empate ou se alguem venceu
+
+            //mostrar resultado,claro
+
+            //a cada rodada, durma 3 segundos para dar tempo de ver o resultado
+    }
+}
+
+bin{
+    void main(){
+        pedra_papel_tesoura.jogo();
+    }
+}
