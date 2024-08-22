@@ -1,4 +1,4 @@
-dart create pedra_papel_tesoura -template
+dart create pedra_papel_tesoura -t console
 
 lib{
     //importar pacote para entrada e saida
