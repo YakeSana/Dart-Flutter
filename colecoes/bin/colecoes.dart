@@ -1,13 +1,82 @@
-import 'package:colecoes/colecoes.dart' as colecoes;
+void main(List<String> arguments) {
+  var portugues = {'Brasil', 'Portugal'};
 
-void main(List<String> arguments){
+  var euro = {'Portugal', 'Alemanha', 'Espanah'};
 
+  print(portugues.union(euro).difference(portugues.intersection(euro)));
+
+  // var lembretes = {1: 'Fazer Café', 2: 'Ver um filme'};
+
+  // for (final key in lembretes.keys) print(key);
+
+  // for (final value in lembretes.values) print(value);
+
+  // for (final entry in lembretes.entries) {
+  //   print(entry.key);
+  //   print(entry.value);
+  // }
+  // ;
+
+  // // //mapas
+
+  // var pessoa = <String, dynamic>{'nome': 'Pedro', 'idade': 22};
+
+  // //type casting
+  // var nome = pessoa['nome'] as String;
+  // print(nome.toUpperCase());
+
+  // var idade = pessoa['idade'] as String;
+  // print(nome.toLowerCase());
+
+  // var pessoa = <String?, Object?>{null:null};
+
+  // var pessoa = {
+  //   'nome': 'Ana',
+  //   'nome': 18,
+  // };
+
+  // pessoa['nome'] = 'Ana Paula';
+  // print(pessoa);
+
+  // var pessoa = {'nome': 'Ana', 'idade': 18, 'altura': 1.8};
+
+  // var lembretes = {1: 'Fazer Café', 2: 'Ir à feira'};
+
+  // var A = {1, 2, 3, 4, 5, 6};
+  // var B = {1, 3, 7};
+
+  // //uniao
+  // print(A.union(B));
+
+  // //intersecção
+  // print(A.intersection(B));
+
+  // // A / B
+  // print(A.difference(B));
+
+  // // B / A
+  // print(B.difference(A));
+
+  // //type annotation
+  // var nomes2 = <String>{"Ana"};
+
+  // print(nomes2.elementAt(0));
+
+  // //sem inferência
+  // Set<String> nomes = {};
+
+  // var tupla = ("Ana", 'João');
+  // print(tupla.runtimeType);
+
+  // print(tupla[1]);
+
+  // print(tupla.$1);
 
   //List<String>? eAgora = null;
 
   //List<String?>? eAgora = null;
 
-  List<List<String?>>? eAgora = [["Lis1","List2"],["List3","List",null]];
+  //List<List<String?>>? eAgora = [["Lis1","List2"],["List3","List",null]];
 
   //type annotation
   // var nomes = <String?> [];
@@ -46,13 +115,13 @@ void main(List<String> arguments){
   // nomes[1] = 2.4;
   // nomes[0].falar();
   //
-  // 
+  //
   // num sum = 0;
   // for(final arg in arguments){
   //   sum += int.parse(arg);
   // };
   // print(sum);
 
-  // desafio 
-  // estudar como funciona a função for each que as listas 
+  // desafio
+  // estudar como funciona a função for each que as listas
 }
