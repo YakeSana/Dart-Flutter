@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'src/app.dart';
 
 void main(){
-  final app = App();
+  const app = App();
   runApp(app);
   //const app = MaterialApp(); 
 }
