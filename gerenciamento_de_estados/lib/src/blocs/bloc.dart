@@ -15,6 +15,9 @@ class Bloc with Validators{
   Stream <String> get password => _passwordController.stream.transform(validatePassword);
 
   void dispose(){
-  
+    _emailController.close();
+    _passwordController.close();
   }
 }
+
+final bloc = Bloc();

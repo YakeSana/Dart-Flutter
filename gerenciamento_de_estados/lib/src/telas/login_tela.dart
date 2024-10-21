@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../blocs/bloc.dart';
 
 class LoginTela extends StatelessWidget {
   @override
@@ -11,42 +12,48 @@ class LoginTela extends StatelessWidget {
             passwordField(),
             submitButton(),
           ],
-        )
+        ));
+  }
+
+  Widget emailField() {
+    return StreamBuilder(
+        stream: bloc.email,
+        builder: (context, AsyncSnapshot<String> snapshot) {
+          return TextField(
+            onChanged: bloc.changeEmail,
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+                hintText: 'seuemail@email.com',
+                border: OutlineInputBorder(),
+                labelText: 'Digite seu e-mail',       
+                errorText: snapshot.hasError?snapshot.error.toString():null,
+            ),
+          );
+
+        }
     );
   }
 
-  Widget emailField(){
-    return const TextField(
-      keyboardType: TextInputType.emailAddress,
-      decoration: InputDecoration(
-        hintText: 'seuemail@email.com',
-        border: OutlineInputBorder(),
-        labelText: 'Digite seu e-mail' 
-      ),
+  Widget passwordField() {
+    return StreamBuilder(
+      stream: bloc.password,
+      builder: (context, AsyncSnapshot<String>snapshot){
+        return TextField(
+          onChanged: bloc.changePassword,
+          obscureText: true,
+          decoration: InputDecoration(
+          border: const OutlineInputBorder(), labelText: 'Digite Sua Senha',
+          errorText: snapshot.error?.toString()
+          )
+        );
+      }
     );
   }
 
-  Widget passwordField(){
-    return const TextField(
-      obscureText: true,
-      decoration: InputDecoration(
-        border: OutlineInputBorder(),
-        labelText: 'Digite Sua Senha'
-      ),
-    );
-  }
-
-  Widget submitButton(){
+  Widget submitButton() {
     return Container(
-      margin:const EdgeInsets.only(top: 20.0),
-      child: 
-        ElevatedButton(
-          onPressed: (){},
-          child: const Text('Login')
-      ),
+      margin: const EdgeInsets.only(top: 20.0),
+      child: ElevatedButton(onPressed: () {}, child: const Text('Login')),
     );
   }
 }
-
-
-
